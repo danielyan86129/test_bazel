@@ -1,0 +1,13 @@
+cc_binary(
+    name = "main",
+    srcs = ["main.cpp"],
+    deps = [
+        # ANN defines lib in `src` dir
+        "@ann//src:libann",
+        # tetgen has targets at the pkg level
+        "@tetgen//:libtetgen",
+        # tao's iso-surface
+        "@isosurface//:libisosurface",
+        "@trimesh//libsrc:libtrimesh",
+    ],
+)
