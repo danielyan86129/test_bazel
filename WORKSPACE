@@ -1,3 +1,5 @@
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
+
 local_repository(
     name = "tetgen",
     path = "../3rdparty/tetgen",
@@ -18,8 +20,8 @@ local_repository(
     path = "../3rdparty/trimesh2",
 )
 
-# git_repository(
-# 		name = "com_github_nelhage_rules_boost",
-# 		commit = "239ce40e42ab0e3fe7ce84c2e9303ff8a277c41a",
-# 		remote = "https://github.com/nelhage/rules_boost",
-# 		)
+git_repository(
+    name = "com_github_gflags_gflags",
+    remote = "https://github.com/gflags/gflags.git",
+    tag = "v2.2.2",
+)
